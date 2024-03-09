@@ -11,7 +11,12 @@ interface TeamProps {
 }
 
 function Welcome() {
-  return <h1>College Basketball Teams!</h1>;
+  return (
+    <div>
+      <h1>College Basketball Teams!</h1>
+      <p>learn about the cool basketball teams found in the country!</p>
+    </div>
+  );
 }
 
 class BBall extends React.Component<TeamProps> {
@@ -25,6 +30,7 @@ class BBall extends React.Component<TeamProps> {
         <h3>
           Location: {oneTeam.city}, {oneTeam.state}
         </h3>
+        <h5>* * * * *</h5>
       </div>
     );
   }
