@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import blah from './CollegeBasketballTeams.json';
 
 interface TeamProps {
   school: string;
@@ -8,12 +9,6 @@ interface TeamProps {
   city: string;
   state: string;
 }
-
-const basketballTeamNames = [
-  {
-    teamName: '',
-  },
-];
 
 function Welcome() {
   return <h1>College Basketball Teams!</h1>;
@@ -38,7 +33,7 @@ class BBall extends React.Component<TeamProps> {
 function BasketballTeamList() {
   return (
     <div>
-      {basketballTeamNames.map((oneTeam) => (
+      {blah.teams.map((oneTeam) => (
         <BBall {...oneTeam} />
       ))}
     </div>
